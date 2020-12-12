@@ -1,1 +1,1 @@
-web: gunicorn app:torneo-amongo
+web: gunicorn torneo-amongo:app
