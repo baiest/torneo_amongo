@@ -9,9 +9,13 @@ body {
     margin: 2% auto
 }
 
+.info {
+    text-align: left;
+    color: white
+}
+
 .contenedor {
     width: 30%;
-    margin: 0 auto;
-    background: #00aae4;
-    border: 1px solid
+    margin: 10px;
+    display: inline-grid
 }
