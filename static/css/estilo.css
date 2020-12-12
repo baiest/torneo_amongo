@@ -1,6 +1,21 @@
 body {
     text-align: center;
     font-family: "Verdana";
+    background: #ccd;
+}
+
+header img {
+    width: 100%;
+    display: flex;
+}
+
+.cuerpo {
+    display: flex;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black
 }
 
 .puntos {

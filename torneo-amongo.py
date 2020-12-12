@@ -37,7 +37,6 @@ def index():
         except:
             flag = False
         i+=1
-
     listaLetra = datos[11][1:6]
 
     info = []
@@ -50,10 +49,10 @@ def index():
         punto = int(request.form['punto'])
         celda = int(request.form['celda'])
         while datos[i][0] != name:
-            i+=1    
+            i+=1 
+            print(datos[i][0],name)   
         datos[i][celda-1] = str(int(datos[i][celda-1]) + punto)
         participante[datos[i][0]] += punto
-        print(name, punto, celda, "---", int(datos[i][celda-1]))
         worksheet.update_cell(i+1, celda, str(int(datos[i][celda-1])))
     
     ##ORDENAR PUESTOS
