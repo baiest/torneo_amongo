@@ -3,11 +3,11 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 from flask import Flask
-from flask import request, jsonify
+from flask import request, jsonify, render_template
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
+
+def tabla():
     scopes = [
     'https://www.googleapis.com/auth/spreadsheets',
     'https://www.googleapis.com/auth/drive'
@@ -40,5 +40,9 @@ def hello_world():
     print(participantes)
     return jsonify(participantes)
 
+@app.route('/')
+def index():
+    participantes = tabla()
+    return render_template('./public/index.html')
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port = 5000)
