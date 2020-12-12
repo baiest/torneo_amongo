@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    font-family: "Verdana";
+}
+
+.puntos {
+    width: 70%;
+    margin: 0 auto;
+    margin: 2% auto
+}
+
+.contenedor {
+    width: 30%;
+    margin: 0 auto;
+    background: #00aae4;
+    border: 1px solid
+}
