@@ -32,7 +32,6 @@ def index():
     sh = gc.open("Torneo Amongo")
     
     worksheet = sh.get_worksheet(get_nivel())
-    print(get_nivel())
 
     # OBTENER TABLA DE DATOS
     datos = worksheet.get_all_values() 
@@ -58,8 +57,7 @@ def index():
         celda = int(request.form['celda'])
 
         while datos[i][0] != name:
-            i+=1 
-            print(datos[i][0],name)   
+            i+=1   
         datos[i][celda-1] = str(int(datos[i][celda-1]) + punto)
         participante[datos[i][0]] += punto
         worksheet.update_cell(i+1, celda, str(int(datos[i][celda-1])))
@@ -67,10 +65,8 @@ def index():
     if request.method == "GET":
         if request.args.get('sig'):
             set_nivel(get_nivel()+ int(request.args.get('sig'))) 
-            print(get_nivel())  
         if request.args.get('back'):
             set_nivel(get_nivel()+ int(request.args.get('back'))) 
-            print(get_nivel())  
     
     ##ORDENAR PUESTOS
     orden = dict(sorted(participante.items(), key=operator.itemgetter(1), reverse=True))
