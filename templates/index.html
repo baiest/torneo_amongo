@@ -33,7 +33,7 @@
                         <form action="#puntos" method="post">
                             <input class="d-none" type="number" name="celda" value={{listaLetra.index(letra) + 2}}>
                             <input class="d-none" type="text" name="name" value={{name}}> {% if letra=='D' %}
-                            <input class="d-none" type="number" naction="#puntos" ame="punto" value="-1">
+                            <input class="d-none" type="number" action="#puntos" name="punto" value="-1">
                             <input class="btn btn-danger" type="submit" value="-1"> {% elif letra=='E' %}
                             <input class="d-none" type="number" name="punto" value="+2">
                             <input class="btn btn-success" type="submit" value="+2"> {% else %}
@@ -71,6 +71,17 @@
 
             </tbody>
         </table>
+    </section>
+    <h2 class="text-align-center">PARTIDA {{partida}}</h2>
+    <section class="d-block">
+        <form method="get" class="mb-3">
+            <input class="d-none" type="number" name="sig" value="1">
+            <input type="submit" class="btn btn-warning pr-5" value="Siguente partida ->">
+        </form>
+        <form method="get">
+            <input class="d-none" type="number" name="back" value="-1">
+            <input type="submit" class="btn btn-warning pr-5" value="<- Anterior partida">
+        </form>
     </section>
 
     <div class="contenedor">
