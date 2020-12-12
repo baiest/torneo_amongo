@@ -31,6 +31,7 @@ def index():
     gc = gspread.authorize(credentials)
     sh = gc.open("Torneo Amongo")
     
+    print("Nivel: ",get_nivel())
     worksheet = sh.get_worksheet(get_nivel())
 
     # OBTENER TABLA DE DATOS
