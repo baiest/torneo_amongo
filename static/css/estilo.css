@@ -9,6 +9,11 @@ header img {
     display: flex;
 }
 
+figure img {
+    width: 30%;
+    height: auto;
+}
+
 .cuerpo {
     display: flex;
 }
